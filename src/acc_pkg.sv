@@ -14,17 +14,17 @@ package acc_pkg;
   // ISA bit width.
   parameter int DataWidth             = 32;
   // Number of interconnect hierarchy levels
-  parameter int NumHier               = 3;
+  parameter int NumHier               = 1;
   // Number of responders per hierarchy level
-  parameter int NumRsp[NumHier]       = '{4,2,2};
+  parameter int NumRsp[NumHier]       = '{1};
   // Support for ternary operations
   parameter bit TernaryOps            = 1'b1;
   // Support for dual writeback instructions
   parameter bit DualWriteback         = 1'b0;
   // Insert pipeline stage at hierarchy level X, request path
-  parameter bit RegisterReq [NumHier] = '{0,0,0};
+  parameter bit RegisterReq [NumHier] = '{0};
   // Insert pipeline stage at hierarchy level X, response path
-  parameter bit RegisterRsp [NumHier] = '{0,0,0};
+  parameter bit RegisterRsp [NumHier] = '{0};
 
   //////////////////////
   // Helper Functions //
